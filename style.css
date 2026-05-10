@@ -457,6 +457,12 @@ body {
     overflow: hidden;
 }
 
+@media (max-width: 768px) {
+    .mannequin-showcase {
+        padding: 5vh 0;
+    }
+}
+
 .showcase-header {
     padding: 0 var(--container-padding);
     margin-bottom: 4rem;
@@ -629,6 +635,12 @@ body {
     overflow-x: hidden;
 }
 
+@media (max-width: 768px) {
+    .hero-scrub {
+        height: 120vh;
+    }
+}
+
 .hero-sticky {
     position: sticky;
     top: 0;
@@ -765,6 +777,12 @@ body {
     background: #080808;
     text-align: center;
     border-top: 1px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+    .footer-cta {
+        padding: 5vh var(--container-padding);
+    }
 }
 
 .footer-content {
