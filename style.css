@@ -27,13 +27,19 @@ body {
     font-family: var(--font-main);
     color: var(--text-color);
     background-color: var(--bg-color);
-    background-image: linear-gradient(to bottom, rgba(5, 5, 5, 0.9), rgba(5, 5, 5, 0.95)), url('CATALOGO/Screenshot 2026-05-08 110142.png');
+    background-image: linear-gradient(to bottom, rgba(5, 5, 5, 0.9), rgba(5, 5, 5, 0.95)), url('CATALOGO/sneaker-nike-white.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     overflow-x: hidden;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+    }
 }
 
 /* --- OVERLAYS --- */
@@ -249,11 +255,18 @@ body {
 }
 
 .hero-title {
-    font-size: clamp(3rem, 12vw, 10rem);
+    font-size: clamp(3rem, 15vw, 10rem);
     font-weight: 900;
     letter-spacing: -0.04em;
     line-height: 0.9;
     text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 18vw;
+    }
 }
 
 .tracking-in {
@@ -311,9 +324,12 @@ body {
         grid-template-rows: auto;
     }
     .bento-item {
-        height: 350px !important;
+        height: 300px !important;
         grid-column: span 1 !important;
         grid-row: span 1 !important;
+    }
+    .bento-title {
+        font-size: 1.8rem;
     }
 }
 
@@ -466,6 +482,13 @@ body {
     flex-shrink: 0;
     border-radius: 20px;
     transition: var(--transition-smooth);
+}
+
+@media (max-width: 768px) {
+    .showcase-img {
+        width: 250px;
+        height: 350px;
+    }
 }
 
 .showcase-img:hover {
@@ -621,12 +644,20 @@ body {
 .hero-card {
     position: absolute;
     width: 400px;
+    max-width: 85vw;
     height: 550px;
+    max-height: 70vh;
     background: #222;
     z-index: 2;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 768px) {
+    .hero-title-top, .hero-title-bottom {
+        font-size: 25vw;
+    }
 }
 
 .hero-card img {
@@ -1131,24 +1162,35 @@ body {
         display: none;
     }
     
+    .navbar {
+        padding: 1.5rem var(--container-padding);
+    }
+
     .brand-logo {
         height: 30px;
     }
     
     .nav-actions {
-        gap: 1rem;
+        gap: 0.8rem;
     }
     
-    .cart-btn span {
+    .cart-btn-text {
         display: none;
     }
     
     .cart-btn {
-        padding: 0.5rem;
+        padding: 0;
+        width: 44px;
+        height: 44px;
         border-radius: 50%;
-        width: 40px;
-        height: 40px;
         justify-content: center;
+        position: relative;
+    }
+
+    .cart-indicator {
+        position: absolute;
+        top: -5px;
+        right: -5px;
     }
 }
 
