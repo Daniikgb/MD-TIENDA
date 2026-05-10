@@ -28,7 +28,6 @@ html, body {
 
 body {
     min-height: 100vh;
-}
     font-family: var(--font-main);
     color: var(--text-color);
     background-color: var(--bg-color);
@@ -779,6 +778,14 @@ body {
     justify-content: center;
     gap: 3rem;
     margin-bottom: 4rem;
+}
+
+@media (max-width: 768px) {
+    .footer-contacts {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
 }
 
 .contact-link {
