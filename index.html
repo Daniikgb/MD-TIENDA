@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MG TIENDA — Streetwear Culture</title>
+  <meta name="description" content="Streetwear premium desde Ciudad del Este. Drop exclusivo 2026.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="noise"></div>
+  <div class="ambient-glow"></div>
+
+  <nav class="navbar">
+    <a href="#" class="brand">
+      <img src="logo.jpg" alt="MG TIENDA" class="brand-logo">
+    </a>
+    <div class="nav-links">
+      <a href="#" data-hover>INICIO</a>
+      <a href="#catalog" data-hover>CATÁLOGO</a>
+      <a href="#showcase" data-hover>SHOWCASE</a>
+      <div class="nav-item dropdown">
+        <button class="dropdown-toggle" data-hover>CONTACTO</button>
+        <div class="dropdown-menu">
+          <a href="https://wa.me/595975311783" target="_blank" class="dropdown-item">WHATSAPP</a>
+          <a href="https://www.instagram.com/mgtiendaa/" target="_blank" class="dropdown-item">INSTAGRAM</a>
+          <a href="https://www.tiktok.com/@mgtiendaa" target="_blank" class="dropdown-item">TIKTOK</a>
+          <div class="dropdown-info">
+            <p>LUN - SAB: 08:30 - 19:30</p>
+            <p>DOMINGO: CERRADO</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nav-actions">
+      <button class="cart-btn" id="navCartBtn" data-hover>
+        CARRITO
+        <span class="cart-indicator" id="cartBadge">0</span>
+      </button>
+
+    </div>
+  </nav>
+
+  <header class="hero">
+
+    <h1 class="hero-title tracking-in">MG TIENDA</h1>
+    <div class="scroll-prompt">
+      <span class="scroll-text">DESLIZA PARA VER</span>
+      <div class="scroll-line"></div>
+    </div>
+  </header>
+
+  <section class="bento-section">
+    <div class="bento-container" id="bentoContainer">
+      <!-- Bento items injected here -->
+    </div>
+  </section>
+
+  <section class="mannequin-showcase reveal" id="showcase">
+    <div class="showcase-header">
+      <h2 class="section-title">DROPS</h2>
+      <p class="showcase-desc">Capturando el estilo de la calle.</p>
+    </div>
+    <div class="showcase-carousel" id="showcaseCarousel">
+      <!-- Injected by JS -->
+    </div>
+  </section>
+
+  <main class="catalog" id="catalog">
+    <div class="catalog-header reveal">
+      <h2 class="section-title">LA COLECCIÓN</h2>
+      <div class="filters" id="filters">
+        <button class="filter-btn active" data-filter="all" data-hover>Todos</button>
+        <button class="filter-btn" data-filter="hoodie" data-hover>Hoodies</button>
+        <button class="filter-btn" data-filter="tee" data-hover>Remeras</button>
+        <button class="filter-btn" data-filter="jacket" data-hover>Abrigos</button>
+        <button class="filter-btn" data-filter="acc" data-hover>Accesorios</button>
+
+      </div>
+    </div>
+
+    <div class="product-grid" id="productGrid">
+      <!-- Dynamic Products injected here -->
+    </div>
+  </main>
+
+  <section class="hero-scrub" id="heroScrub">
+    <div class="hero-sticky">
+      <h1 class="hero-title-top" id="titleTop">MG</h1>
+      <div class="hero-card" id="heroCard">
+        <img src="CATALOGO/Q3KC6.jpg" alt="Campaign">
+      </div>
+      <h1 class="hero-title-bottom" id="titleBottom">TIENDA</h1>
+    </div>
+  </section>
+
+  <section class="footer-cta" id="footerCta">
+    <div class="footer-content">
+      <h2 class="footer-title">MG TIENDA</h2>
+      <div class="footer-contacts">
+        <a href="https://www.instagram.com/mgtiendaa/" target="_blank" class="contact-link" data-hover>
+          <span class="contact-platform">Instagram</span>
+          <span class="contact-handle">@mgtiendaa</span>
+        </a>
+        <a href="https://www.tiktok.com/@mgtiendaa" target="_blank" class="contact-link" data-hover>
+          <span class="contact-platform">TikTok</span>
+          <span class="contact-handle">@mgtiendaa</span>
+        </a>
+        <a href="https://wa.me/595975311783" target="_blank" class="contact-link" data-hover>
+          <span class="contact-platform">WhatsApp</span>
+          <span class="contact-handle">+595 975 311783</span>
+        </a>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 MG TIENDA. Todos los derechos reservados.</p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Modal -->
+  <div class="product-modal-overlay" id="productModalOverlay"></div>
+  <div class="product-modal" id="productModal">
+    <button class="modal-close" id="closeProductModal">&times;</button>
+    <div class="modal-grid">
+      <div class="modal-image">
+        <img id="modalProductImg" src="" alt="">
+      </div>
+      <div class="modal-info">
+        <span class="modal-category" id="modalProductCategory">CATEGORÍA</span>
+        <h2 class="modal-title" id="modalProductTitle">NOMBRE PRODUCTO</h2>
+        <p class="modal-price" id="modalProductPrice">₲0</p>
+        <p class="modal-desc" id="modalProductDesc">Breve descripción del producto...</p>
+
+        <div class="size-selector">
+          <p class="size-label">ELEGIR TALLE</p>
+          <div class="size-options">
+            <button class="size-btn" data-size="S">S</button>
+            <button class="size-btn" data-size="M">M</button>
+            <button class="size-btn" data-size="L">L</button>
+            <button class="size-btn active" data-size="XL">XL</button>
+          </div>
+        </div>
+
+        <div class="modal-actions">
+          <button class="modal-order-btn" id="modalOrderBtn">
+            COMPRAR AHORA
+          </button>
+          <button class="modal-cart-btn" id="modalAddCartBtn">
+            AÑADIR AL CARRITO
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Drawer -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h2>Tu Pedido</h2>
+      <button class="cart-close" id="cartCloseBtn" data-hover>&times;</button>
+    </div>
+    <div class="cart-body" id="cartBody">
+      <div class="cart-empty-msg">Tu carrito está vacío.</div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total"
+        style="display: flex; justify-content: space-between; margin-bottom: 1rem; font-weight: 700;">
+        <span>Total</span>
+        <span id="cartTotalAmt">₲0</span>
+      </div>
+      <button class="checkout-btn" id="checkoutBtn" data-hover>
+        ENVIAR POR WHATSAPP
+      </button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
